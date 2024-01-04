@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - DisabledTextLayer
+  - BackgroundLayer
+  - PrimaryTextLayer
+  - HoverLayer
+  - PrimaryLayer
+  - SurfaceTextLayer
+  - SurfaceLayer
+  - SecondaryTextLayer
+  - iconView
+  - SecondaryLayer
+  - JMRrig
+  - ErrorLayer
+  - BackgroundTextLayer
+  - DisabledLayer
+  - Search
+  - SecondryLayer
+  - ErrorTextLayer
+  - Clear
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Head
+  - Left
+  - Right
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0

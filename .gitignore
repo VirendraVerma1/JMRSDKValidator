@@ -9,6 +9,10 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
+/[Aa]ssets/[Aa]goraEngine/
+/[Aa]ssets/[Cc]leverTapUnity/
+/[Aa]ssets/[Jj]MRSDK/
+/[Aa]ssets/[Pp]lugins/
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
