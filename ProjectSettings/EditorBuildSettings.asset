@@ -4,5 +4,74 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Validation/Example/Scenes/JMRMasterScene.unity
+    guid: 05afa1d47514948408b85b5cdeca4709
+  - enabled: 1
+    path: Assets/Validation/Example/Scenes/JMRAudioDemo.unity
+    guid: c7bd880a13d2288498b0a576cbdcc34c
+  - enabled: 1
+    path: Assets/Validation/Example/Scenes/JMRBezierDemo.unity
+    guid: 119cbeb34279a47439b7afb2440fce3d
+  - enabled: 1
+    path: Assets/Validation/Example/Scenes/JMRCameraDemo.unity
+    guid: 33a33776c4039274288f267f482fadc3
+  - enabled: 1
+    path: Assets/Validation/Example/Scenes/JMRDeviceDemo.unity
+    guid: 298d9822f9f06ce408f549edddc83a0c
+  - enabled: 1
+    path: Assets/Validation/Example/Scenes/JMRDisplayDemo.unity
+    guid: bb62744a78a5e7345b7a4958a037ee6d
+  - enabled: 1
+    path: Assets/Validation/Example/Scenes/JMRDwellAndGazeControllerDemo.unity
+    guid: 61580b047439ee446801d6870bf2e38c
+  - enabled: 1
+    path: Assets/Validation/Example/Scenes/JMRDwellAndGazeHeadDemo.unity
+    guid: 1c897a60f6ea64540ad93742a2f7677d
+  - enabled: 1
+    path: Assets/Validation/Example/Scenes/JMRHapticsDemo.unity
+    guid: 96028103274c8aa4e94022fcf5bcda43
+  - enabled: 1
+    path: Assets/Validation/Example/Scenes/JMRInteractionDemo.unity
+    guid: aade679ea0beb35479a70e3e9696b6d5
+  - enabled: 1
+    path: Assets/Validation/Example/Scenes/JMRInteractionGettersDemo.unity
+    guid: 2a05fc73e8dbdd34a84129d12fa61aa5
+  - enabled: 1
+    path: Assets/Validation/Example/Scenes/JMRInteractionSourceGetterDemo.unity
+    guid: 6c84483a0ba5b1849b224e25e70135b5
+  - enabled: 1
+    path: Assets/Validation/Example/Scenes/JMRLocalRig.unity
+    guid: deec29793a30bc0428d6d27a12e2ac34
+  - enabled: 1
+    path: Assets/Validation/Example/Scenes/JMRManipulationDemo.unity
+    guid: 28cdf1d3e647648afab031676801ed2f
+  - enabled: 1
+    path: Assets/Validation/Example/Scenes/JMRParallel Demo.unity
+    guid: a235a32c7ed444b488628d9fb0948755
+  - enabled: 1
+    path: Assets/Validation/Example/Scenes/JMRPlatformDemo.unity
+    guid: e9909b60daf86f44bb73cf2a79132b77
+  - enabled: 1
+    path: Assets/Validation/Example/Scenes/JMRRecenterDemo.unity
+    guid: 6e5ebb858e925da4494b44ef72263158
+  - enabled: 1
+    path: Assets/Validation/Example/Scenes/JMRToolkitsDemo V2.unity
+    guid: db98727bc1c697040b9b6a1781550b25
+  - enabled: 1
+    path: Assets/Validation/Example/Scenes/JMRToolkitsDemo.unity
+    guid: 15f852d792b82824daaa1921edf3b9de
+  - enabled: 1
+    path: Assets/Validation/Example/Scenes/JMRTrackingDemo.unity
+    guid: 9a6c698f93ba1a946b3f4042cfd9e25a
+  - enabled: 1
+    path: Assets/Validation/Example/Scenes/JMRVoiceDemo.unity
+    guid: 8d53b35a958a61748a517529c5ce12cc
+  - enabled: 1
+    path: Assets/Validation/Example/Scenes/ScreenCasting_V2.unity
+    guid: 97220af0f7af4874cb0f0bfc4d0c928d
   m_configObjects: {}
