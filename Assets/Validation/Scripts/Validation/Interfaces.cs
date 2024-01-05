@@ -12,12 +12,14 @@ namespace Validation.Scripts.Validation
 		IBackHandler, IHomeHandler, IMenuHandler, IVoiceHandler, IFn1Handler, IFn2Handler, IManipulationHandler, IScreenTouchHandler
 	{
 		public TextMeshProUGUI statusText;
+		public TextMeshProUGUI timeScaleText;
 		public bool isGlobalListener;
 
         private void Start()
         {
             if (isGlobalListener) SetGlobalListener();
             SetRecenter();
+            timeScaleText.text = $"TimeScale: {Time.timeScale}";
         }
 		public void SetGlobalListener()
 		{
@@ -30,6 +32,14 @@ namespace Validation.Scripts.Validation
 			JMRInputManager.Instance.RemoveGlobalListener(gameObject);
 		}
 
+		int timeScale = 1;
+		public void SwitchTimeScale()
+		{
+			timeScale = timeScale == 1 ? 0 : 1;
+			Time.timeScale = timeScale;
+			timeScaleText.text = $"TimeScale: {timeScale}";
+		}
+		
 		int int_OnRecenterStart;
 		int int_OnRecenterCancelled;
 		int int_OnRecenterEnd;
