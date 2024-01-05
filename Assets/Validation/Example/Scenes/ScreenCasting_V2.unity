@@ -3120,7 +3120,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!1 &8752326135966886510
 GameObject:
   m_ObjectHideFlags: 0
@@ -3134,7 +3134,6 @@ GameObject:
   - component: {fileID: 8752326135966886509}
   - component: {fileID: 8752326135966886508}
   - component: {fileID: 8752326135966886511}
-  - component: {fileID: 8752326135966886512}
   m_Layer: 5
   m_Name: EnvironmentCanvas
   m_TagString: Untagged
@@ -3152,18 +3151,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 31530ed5566a2924d9bf61eac7b3230f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &8752326135966886512
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8752326135966886510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 397e0cb29e7f1fe46a08835bf32cd405, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!224 &9175762282264571239

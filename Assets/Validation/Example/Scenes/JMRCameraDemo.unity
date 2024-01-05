@@ -2289,7 +2289,6 @@ GameObject:
   m_Component:
   - component: {fileID: 920306499}
   - component: {fileID: 920306500}
-  - component: {fileID: 920306501}
   m_Layer: 0
   m_Name: CameraExample
   m_TagString: Untagged
@@ -2339,18 +2338,6 @@ MonoBehaviour:
   resolutionControlParent: {fileID: 628000200}
   PrevResDropdown: {fileID: 716263919}
   CaptureResDropdown: {fileID: 1487122441}
---- !u!114 &920306501
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 920306498}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 397e0cb29e7f1fe46a08835bf32cd405, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1043243120
 GameObject:
   m_ObjectHideFlags: 0
