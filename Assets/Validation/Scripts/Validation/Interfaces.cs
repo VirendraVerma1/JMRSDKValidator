@@ -1,4 +1,5 @@
 using System;
+using JMRSDK;
 using JMRSDK.InputModule;
 using TMPro;
 using UnityEngine;
@@ -8,7 +9,7 @@ using UnityEngine;
 namespace Validation.Scripts.Validation
 {
 	public class Interfaces : MonoBehaviour, ISelectHandler, ISelectClickHandler, IFocusable, ISwipeHandler, ITouchHandler,
-		IBackHandler, IHomeHandler, IMenuHandler, IVoiceHandler, IFn1Handler, IFn2Handler, IManipulationHandler, IScreenTouchHandler 
+		IBackHandler, IHomeHandler, IMenuHandler, IVoiceHandler, IFn1Handler, IFn2Handler, IManipulationHandler, IScreenTouchHandler
 	{
 		public TextMeshProUGUI statusText;
 		public bool isGlobalListener;
@@ -16,6 +17,7 @@ namespace Validation.Scripts.Validation
         private void Start()
         {
             if (isGlobalListener) SetGlobalListener();
+            SetRecenter();
         }
 		public void SetGlobalListener()
 		{
@@ -26,6 +28,30 @@ namespace Validation.Scripts.Validation
 		{
 			isGlobalListener = false;
 			JMRInputManager.Instance.RemoveGlobalListener(gameObject);
+		}
+
+		int int_OnRecenterStart;
+		int int_OnRecenterCancelled;
+		int int_OnRecenterEnd;
+		void SetRecenter()
+		{
+			JMRSystemActions.Instance.OnRecenterStart.AddListener(() => 
+			{ 
+				int_OnRecenterStart++;
+			});
+			JMRSystemActions.Instance.OnRecenterCancelled.AddListener(() => 
+			{ 
+				int_OnRecenterCancelled++;
+			});
+			JMRSystemActions.Instance.OnRecenterEnd.AddListener(() => 
+			{ 
+				int_OnRecenterEnd++;
+			});
+		}
+
+		public void Recenter()
+		{
+			JMRTrackerManager.Instance.Recenter();
 		}
 
 		public void ResetVariables()
@@ -67,7 +93,7 @@ namespace Validation.Scripts.Validation
 
 		void SetStatus()
 		{
-			statusText.text = $"isGlobalListener: {isGlobalListener}\n" + 
+			statusText.text = $"isGlobalListener: {isGlobalListener}\n" +
 			                  $"OnSelectDown: {int_OnSelectDown} {string_OnSelectDown}\n" +
 			                  $"OnSelectUp: {int_OnSelectUp} {string_OnSelectUp}\n" +
 			                  $"OnSelectClicked: {int_OnSelectClicked} {string_OnSelectClicked}\n" +
@@ -95,12 +121,14 @@ namespace Validation.Scripts.Validation
 			                  $"OnManipulationCompleted: {int_OnManipulationCompleted}\n" +
 			                  $"OnScreenTouchBegan: {int_OnScreenTouchBegan}\n" +
 			                  $"OnScreenTouchEnded: {int_OnScreenTouchEnded}\n" +
-			                  $"OnScreenTouchClick: {int_OnScreenTouchClick}\n";
+			                  $"OnScreenTouchClick: {int_OnScreenTouchClick}\n" +
+			                  $"OnRecenterStart: {int_OnRecenterStart}\n" +
+			                  $"OnRecenterCancelled: {int_OnRecenterCancelled}\n" +
+			                  $"OnRecenterEnd: {int_OnRecenterEnd}\n";
 		}
 	
 		string string_OnSelectDown = "OnSelectDown";
 		int int_OnSelectDown;
-	
 		public void OnSelectDown(SelectEventData eventData)
 		{
 			string_OnSelectDown = eventData.PressType.ToString();
