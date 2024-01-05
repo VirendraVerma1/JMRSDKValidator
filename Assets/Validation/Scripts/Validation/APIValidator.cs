@@ -1,3 +1,4 @@
+using System;
 using JMRSDK;
 using JMRSDK.InputModule;
 using TMPro;
@@ -9,10 +10,30 @@ public class APIValidator : MonoBehaviour
 	public TextMeshProUGUI statusText;
 	public TextMeshProUGUI debugText;
 	public GameObject orientWithController;
+
+	private int glassState = -1;
 	string apiResult = "";
 	string debugResult = "";
 		
 	bool? isDockVisible = null;
+
+	private void Start()
+	{
+		JMRDisplayManager.onPowerStateChange += GlassState;
+	}
+	void GlassState(int state)
+	{
+		glassState = state;
+		if(state == 0)
+		{
+			//removed JioGlass
+		}
+		if(state == 1)
+		{
+			//worn JioGlass
+		}
+	}
+
 	public void ToggleDockVisibility()
 	{
 		isDockVisible = isDockVisible == null ? true : !isDockVisible;
@@ -23,6 +44,7 @@ public class APIValidator : MonoBehaviour
 		apiResult = "API Validator\n";
 		apiResult += $"JMRSystemDockManager.Instance.isDockEnabled(): {JMRSystemDockManager.Instance.isDockEnabled()}\n";
 		apiResult += $"IsDockVisible in script: {isDockVisible}\n";
+		apiResult += $"GlassState: {(glassState == 0 ? "Removed JioGlass" : glassState == 1 ? "Worn JioGlass" : glassState)}\n";
 		statusText.text = apiResult;
 		
 		debugResult = "Debug Validator\n";
