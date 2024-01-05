@@ -13,6 +13,10 @@ namespace Validation.Scripts.Validation
 		public TextMeshProUGUI statusText;
 		public bool isGlobalListener;
 
+        private void Start()
+        {
+            if (isGlobalListener) SetGlobalListener();
+        }
 		public void SetGlobalListener()
 		{
 			isGlobalListener = true;
@@ -22,6 +26,41 @@ namespace Validation.Scripts.Validation
 		{
 			isGlobalListener = false;
 			JMRInputManager.Instance.RemoveGlobalListener(gameObject);
+		}
+
+		public void ResetVariables()
+		{
+			string_OnSelectDown = "OnSelectDown";
+			string_OnSelectUp = "OnSelectUp";
+			string_OnSelectClicked = "OnSelectClicked";
+			int_OnSelectDown = 0;
+			int_OnSelectUp = 0;
+			int_OnSelectClicked = 0;
+			int_OnFocusEnter = 0;
+			int_OnFocusExit = 0;
+			int_OnSwipeLeft = 0;
+			int_OnSwipeRight = 0;
+			int_OnSwipeUp = 0;
+			int_OnSwipeDown = 0;
+			int_OnSwipeStarted = 0;
+			int_OnSwipeUpdated = 0;
+			int_OnSwipeCompleted = 0;
+			int_OnSwipeCanceled = 0;
+			int_OnTouchStart = 0;
+			int_OnTouchStop = 0;
+			int_OnTouchUpdated = 0;
+			int_OnBackAction = 0;
+			int_OnHomeAction = 0;
+			int_OnMenuAction = 0;
+			int_OnVoiceAction = 0;
+			int_OnFn1Action = 0;
+			int_OnFn2Action = 0;
+			int_OnManipulationStarted = 0;
+			int_OnManipulationUpdated = 0;
+			int_OnManipulationCompleted = 0;
+			int_OnScreenTouchBegan = 0;
+			int_OnScreenTouchEnded = 0;
+			int_OnScreenTouchClick = 0;
 		}
 
 		private void Update() => SetStatus();
