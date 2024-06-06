@@ -9,6 +9,7 @@ public class APIValidator : MonoBehaviour
 {
 	public TextMeshProUGUI statusText;
 	public TextMeshProUGUI debugText;
+	public TextMeshProUGUI sdkLoadedText;
 	public GameObject orientWithController;
 
 	private int glassState = -1;
@@ -20,7 +21,22 @@ public class APIValidator : MonoBehaviour
 	private void Start()
 	{
 		JMRDisplayManager.onPowerStateChange += GlassState;
+		// JMRManager.onSDKReady += SDKLoaded;
+		Debug.Log("APIValidator Start");
 	}
+
+	private void OnDestroy()
+	{
+		JMRDisplayManager.onPowerStateChange -= GlassState;
+		// JMRManager.onSDKReady -= SDKLoaded;
+	}
+	
+	void SDKLoaded()
+	{
+		sdkLoadedText.text = "SDK Loaded : YES";
+		Debug.Log("SDK Loaded");
+	}
+
 	void GlassState(int state)
 	{
 		glassState = state;
