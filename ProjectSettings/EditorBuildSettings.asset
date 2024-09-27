@@ -74,7 +74,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Validation/Example/Scenes/ScreenCasting_V2.unity
     guid: 97220af0f7af4874cb0f0bfc4d0c928d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Validation/Example/Scenes/JMRToolkitsDemo V3.unity
     guid: ca8a0b5bc7ab2cc469a26b719f358da3
   m_configObjects: {}

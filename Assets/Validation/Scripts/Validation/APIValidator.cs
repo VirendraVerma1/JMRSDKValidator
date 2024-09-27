@@ -21,14 +21,14 @@ public class APIValidator : MonoBehaviour
 	private void Start()
 	{
 		JMRDisplayManager.onPowerStateChange += GlassState;
-		// JMRManager.onSDKReady += SDKLoaded;
+		JMRManager.onSDKReady += SDKLoaded;
 		Debug.Log("APIValidator Start");
 	}
 
 	private void OnDestroy()
 	{
 		JMRDisplayManager.onPowerStateChange -= GlassState;
-		// JMRManager.onSDKReady -= SDKLoaded;
+		JMRManager.onSDKReady -= SDKLoaded;
 	}
 	
 	void SDKLoaded()
